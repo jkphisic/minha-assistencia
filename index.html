@@ -3,42 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minha Loja</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
-    body { background-color: #ffffff; color: #333; padding: 20px 5%; }
-    header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 40px; }
-    .btn-azul { background-color: #201ff8; color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: bold; }
-    .hero { display: flex; gap: 40px; align-items: center; margin-bottom: 40px; }
-    .hero-esq, .hero-dir { flex: 1; }
-    h1 { font-family: Arial, serif; color: #201ff8; font-size: 2.5rem; margin-top: 10px; }
-    .hero-dir p { margin-bottom: 20px; line-height: 1.5; color: #555; }
-    .banner { background: linear-gradient(135deg, #201ff8, #340d82); color: #fff; padding: 50px; border-radius: 12px; }
-  </style>
+  <meta name="theme-color" content="#201ff8">
+  <meta name="description" content="Digital Fone Oficina de Celulares — assistência técnica para celulares, tablets, computadores, notebooks e videogames.">
+  <title>Digital Fone | Oficina de Celulares</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h2>Digital Fone</h2>
-    <div>
-      <a href="#" style="margin-right: 20px; color: #333; text-decoration: none;">Nossas lojas</a>
-      <a href="#" class="btn-azul"> SOLICITAR ORÇAMENTO ></a>
-    </div>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Digital Fone - início"><img src="assets/logo.png" alt="Digital Fone Oficina de Celulares"></a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#loja">Nossa loja</a><a href="#pagamento">Pagamento</a>
+      <a class="nav-button whatsapp-link" href="#" target="_blank" rel="noopener">Solicitar orçamento ↗</a>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-esq">
-      <small>NOVA AURORA - PR</small>
-      <h1>Assistência Técnica. Para todas as marcas.</h1>
-    </div>
-    <div class="hero-dir">
-      <p>Solicite seu orçamento, e agende seu conserto hoje mesmo</p>
-      <a href="#" class="btn-azul">Encontrar minha loja ></a>
-    </div>
-  </section>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow"><i></i> NOVA AURORA • PARANÁ</span>
+        <h1>Tecnologia em boas mãos. <em>Seu aparelho merece cuidado.</em></h1>
+        <p>Assistência técnica para seus dispositivos, com atenção aos detalhes e soluções para manter você conectado.</p>
+        <div class="hero-actions">
+          <a class="button primary whatsapp-link" href="#" target="_blank" rel="noopener">Solicitar orçamento <span>↗</span></a>
+          <a class="button secondary" href="#servicos">Conheça nossos serviços <span>↓</span></a>
+        </div>
+      </div>
+      <div class="slider" aria-label="Destaques da Digital Fone">
+        <div class="slides">
+          <div class="slide active"><img src="assets/img1.png" alt="Destaque Digital Fone 1"></div>
+          <div class="slide"><img src="assets/img2.png" alt="Destaque Digital Fone 2"></div>
+          <div class="slide"><img src="assets/img3.png" alt="Destaque Digital Fone 3"></div>
+          <div class="slide"><img src="assets/img4.png" alt="Destaque Digital Fone 4"></div>
+        </div>
+        <button class="slider-arrow prev" aria-label="Imagem anterior">‹</button>
+        <button class="slider-arrow next" aria-label="Próxima imagem">›</button>
+        <div class="slider-dots" aria-label="Selecionar imagem">
+          <button class="dot active" aria-label="Ir para imagem 1"></button><button class="dot" aria-label="Ir para imagem 2"></button><button class="dot" aria-label="Ir para imagem 3"></button><button class="dot" aria-label="Ir para imagem 4"></button>
+        </div>
+        <div class="slider-caption"><span>01 — 04</span><b>Digital Fone</b></div>
+      </div>
+      <a class="down-cue" href="#servicos">DESCUBRA NOSSOS SERVIÇOS <span>↓</span></a>
+    </section>
 
-  <section class="banner">
-    <p>DIGITAL FONE</p>
-    <h2 style="font-size: 3rem; margin-top: 10px;">OFICINA DE CELULAR</h2>
-  </section>
+    <section class="services section" id="servicos">
+      <div class="section-top"><span class="kicker">01 / SERVIÇOS</span><span class="section-index">DIGITAL FONE</span></div>
+      <div class="section-heading"><h2>Cuidado completo para <em>seus dispositivos.</em></h2><p>Atendimento técnico para diferentes equipamentos, com serviços conforme a necessidade de cada aparelho.</p></div>
+      <div class="device-grid">
+        <article class="device-card"><span class="device-icon">▯</span><h3>Celulares</h3><p>Manutenção e reparos para smartphones.</p></article>
+        <article class="device-card"><span class="device-icon">▭</span><h3>Tablets</h3><p>Cuidados e soluções para tablets.</p></article>
+        <article class="device-card"><span class="device-icon">▣</span><h3>Computadores</h3><p>Suporte e manutenção de computadores.</p></article>
+        <article class="device-card"><span class="device-icon">▱</span><h3>Notebooks</h3><p>Reparos e manutenção de notebooks.</p></article>
+        <article class="device-card"><span class="device-icon">◈</span><h3>Consoles</h3><p>Manutenção de consoles de videogame.</p></article>
+        <article class="device-card"><span class="device-icon">⌘</span><h3>Controles</h3><p>Reparos em controles de videogame.</p></article>
+      </div>
+      <div class="repair-area">
+        <div class="repair-intro"><span class="kicker">O QUE PODEMOS FAZER</span><h3>Do reparo físico ao <em>suporte digital.</em></h3><p>Entre em contato para consultar disponibilidade, avaliação e condições de cada serviço.</p><a class="text-link whatsapp-link" href="#" target="_blank" rel="noopener">Consultar um serviço ↗</a></div>
+        <div class="repair-list">
+          <div><span>01</span><b>Troca de tela</b></div><div><span>02</span><b>Troca de bateria</b></div>
+          <div><span>03</span><b>Troca de flex de carga</b></div><div><span>04</span><b>Reparo de botões</b></div>
+          <div><span>05</span><b>Alto-falantes</b></div><div><span>06</span><b>Reparos diversos</b></div>
+          <div><span>07</span><b>Reparos de software</b></div><div><span>08</span><b>Backup</b></div>
+          <div><span>09</span><b>Migração de dados</b></div><div><span>10</span><b>Gestão de contas</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="store section" id="loja">
+      <div class="section-top"><span class="kicker">02 / ONDE ESTAMOS</span><span class="section-index">VENHA NOS VISITAR</span></div>
+      <div class="store-layout">
+        <div class="store-photo"><img src="assets/fachada.png" alt="Fachada da loja Digital Fone"><span class="photo-label">DIGITAL FONE • NOSSA LOJA</span></div>
+        <div class="store-info"><h2>Estamos perto de <em>você.</em></h2><p>Será um prazer receber você na Digital Fone. Consulte nossa localização e venha conversar com a nossa equipe.</p>
+          <div class="info-line"><span>ENDEREÇO</span><b data-address>Adicionar endereço completo</b></div>
+          <div class="info-line"><span>HORÁRIO</span><b data-hours>Adicionar horário de atendimento</b></div>
+          <a class="button primary" id="map-link" href="https://www.google.com/maps/search/?api=1&query=Digital+Fone+Nova+Aurora+PR" target="_blank" rel="noopener">Ver rota no Google Maps ↗</a>
+        </div>
+      </div>
+      <div class="map-frame"><iframe title="Mapa de localização da Digital Fone" src="https://www.google.com/maps?q=Digital%20Fone%20Nova%20Aurora%20PR&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <p class="map-note">O mapa e o botão de rota serão ajustados com o endereço exato da loja.</p>
+    </section>
+
+    <section class="payments section" id="pagamento">
+      <div class="payment-content"><span class="kicker">03 / FACILIDADE PARA VOCÊ</span><h2>Mais opções para <em>pagar com tranquilidade.</em></h2>
+        <div class="payment-cards">
+          <article class="payment-card"><span class="payment-symbol">▤</span><div><h3>Cartões</h3><p>Parcelamento em até <strong>18x no cartão</strong>.</p><small>Consulte condições de parcelamento.</small></div></article>
+          <article class="payment-card"><span class="payment-symbol">✦</span><div><h3>Cartão Bonuscred</h3><p>Parcelamento em até <strong>6x</strong>.</p><small>Consulte condições de parcelamento.</small></div></article>
+        </div>
+        <p class="payment-footnote">Condições sujeitas à modalidade de pagamento e confirmação no atendimento.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="footer-brand" href="#inicio"><img src="assets/logo.png" alt="Digital Fone"></a>
+    <span>© <span id="year"></span> Digital Fone Oficina de Celulares. Todos os direitos reservados.</span>
+    <a href="#inicio">Voltar ao topo ↑</a>
+  </footer>
+
+  <a class="whatsapp-float whatsapp-link" href="#" target="_blank" rel="noopener" aria-label="Fale com a Digital Fone pelo WhatsApp"><span class="whatsapp-tooltip">Olá! Precisa de ajuda?</span><span class="whatsapp-mark">◔</span></a>
+  <script src="script.js"></script>
 </body>
 </html>
